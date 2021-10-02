@@ -9,7 +9,6 @@ from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 import re
-from urllib import request
 import urllib
 import requests
 import os
@@ -24,7 +23,7 @@ class WidgetsExample(GridLayout):
             error = 0
             while error == 0:
                 try:
-                    response = request.urlopen(theURL)
+                    response = urllib.request.urlopen(theURL)
                     error = 1
                 except:
                     print("did not find server")
